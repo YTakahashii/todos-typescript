@@ -8,7 +8,7 @@ import TodoAction from 'src/actions/Todo/TodoAction';
 const mapDispatchToProps = (dispatch: Dispatch<TodoAction>): IAddTodoDispatchProps => {
     return {
         addTodo: (todoText: string) => {
-            dispatch(addTodo(todoText));
+            dispatch(addTodo(todoText)); //ここでActionCreatorのaddTodo(text: string)が発火する
         }
     };
 }
