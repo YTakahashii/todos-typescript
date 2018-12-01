@@ -30,18 +30,21 @@ export default class AddTodo extends React.Component<AddTodoProps, AddTodoState>
         });
     }
 
-    private handleInputChange = (node: HTMLInputElement) => {
+    private handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         this.setState({
-            input: node.value
+            input: e.currentTarget.value
         });
     }
 
     public render() {
         return (
             <div>
-                <form onSubmit={this.handleSubmit}></form>
-                <input type="text" ref={this.handleInputChange} />
-                <button type="submit">Todoを追加</button>
+                <form onSubmit={this.handleSubmit}>
+                    <input type="text" onChange={this.handleInputChange} value={this.state.input}/>
+                    <button type="submit">
+                        Todoを追加
+                    </button>
+                </form>
             </div>
         );
     }
