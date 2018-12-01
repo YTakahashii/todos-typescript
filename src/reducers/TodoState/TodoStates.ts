@@ -21,7 +21,7 @@ const todoStates = (state: TodoStates = [], action: TodoAction): TodoStates => {
                 if (todo.id == action.id) {
                     return {
                         ...todo,
-                        completed: true
+                        completed: !todo.completed
                     };
                 } else {
                     return todo;
