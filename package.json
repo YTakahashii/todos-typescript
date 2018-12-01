@@ -22,6 +22,7 @@
     "@types/redux-logger": "^3.0.6",
     "react-redux": "^5.1.1",
     "redux-logger": "^3.0.6",
+    "typesafe-actions": "^2.0.4",
     "typescript": "^3.2.1"
   }
 }
